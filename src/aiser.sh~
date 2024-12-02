@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Purpose:
+# Use ai to improve shell experience
+
+# default AI model:
+# ollama zephyr
+
+
+input_message=$@
+
+#echo "Please answer in short: $input_message" | ollama run zephyr
+echo $input_message | ollama run zephyr
