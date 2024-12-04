@@ -22,11 +22,12 @@ function ask_ollama() {
   cat $fmessage $fcontext | $ai_cmd
 }
 
-#aiser=be_fuzzy
-aiser=be_clear
-keywords=""
+################################################################################
+# add options
+aiser=be_fuzzy			# use a fuzzy completion mode
+#aiser=be_clear			# use a clear completion mode
+keywords="be concise"			# addtional keywords, e.g. "be concise", "be short", "be technical", ...
 
 $aiser $@ $keywords
 
-# add options
 

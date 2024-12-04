@@ -37,7 +37,7 @@ function be_fuzzy(){
 	    # Recursively? This could take quite long time for a large directory. 
 	    # ls -alR $word >> $fcontext
 	    # Let's be easy with the fuzzy
-	    ls -al $word >> $fcontext
+	    ls -al --full-time $word >> $fcontext
 	    
 	    echo "Directory $word ends here." >> $fcontext
 	    echo "" >> $fcontext
@@ -48,7 +48,6 @@ function be_fuzzy(){
     done
 
     # add two empty line to separate messgae and context
-    echo "" >> $fmessage
     echo "" >> $fmessage
     
     ask_ollama $fmessage $fcontext

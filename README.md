@@ -1,13 +1,15 @@
 
 # Table of Contents
 
-1.  [About AISer](#orgf2968fe)
-2.  [Requirement](#org6470f34)
-3.  [Examples](#org3b590be)
+1.  [About AISer](#org6989819)
+2.  [Requirement](#orgb29af03)
+3.  [Usage](#orgc67858c)
+4.  [fuzzy match and clear match](#org30605b5)
+5.  [Examples](#orgcd0678b)
 
 
 
-<a id="orgf2968fe"></a>
+<a id="org6989819"></a>
 
 # About AISer
 
@@ -18,7 +20,7 @@ When executed with one or more filenames as arguments, the script reads their co
 information to the AI for analysis, displaying the generated output on the screen for your review.
 
 
-<a id="org6470f34"></a>
+<a id="orgb29af03"></a>
 
 # Requirement
 
@@ -26,13 +28,58 @@ information to the AI for analysis, displaying the generated output on the scree
     Follow instructions in [Ollama](https://github.com/ollama/ollama) to install and pull Zephyr model "ollama pull zephyr"
 
 
-<a id="org3b590be"></a>
+<a id="orgc67858c"></a>
+
+# Usage
+
+To customize your model in src/aiser.sh below the "add options" section, follow these steps:
+
+1.  Open the file src/aiser.sh using a text editor.
+2.  Locate the section labeled as "add options".
+3.  Make necessary modifications to the options and arguments provided within this section.
+4.  Save the changes made to the file.
+
+Next, you need to link src/aiser.sh to your bin PATH. Here's how:
+
+1.  Open your terminal or command prompt.
+2.  Type the following command replacing '*path/to/your/directory*' with the actual path to where you saved src/aiser.sh:
+    \`\`\`bash
+    ln -s /path/to/your/directory/src/aiser.sh ~/bin/aiser.sh
+    \`\`\`
+3.  Hit Enter to execute the command.
+
+Finally, make an alias to aiser.sh. Here's how:
+
+1.  Type the following command in your terminal or command prompt:
+    \`\`\`bash
+    alias aa='/path/to/your/directory/src/aiser.sh'
+    \`\`\`
+2.  Replace '*path/to/your/directory*' with the actual path to where you saved src/aiser.sh.
+3.  Hit Enter to execute the command.
+4.  Verify that the alias was created successfully by typing 'aiser -h' in your terminal or command prompt. This will display the help message associated with the aiser script.
+
+Enjoy exploring the possibilities of this script!
+
+
+<a id="org30605b5"></a>
+
+# fuzzy match and clear match
+
+In fuzzy match, each word in your query will be iterated over to determine whether it corresponds to a file or directory. For a file, its content will be appended. If it's a directory, its contents will be listed.
+
+Clear match utilizes specific keywords to distinguish between file and directory names as well as lists of files and directories. The possible keywords include:
+
+-   file: followed by a single file name
+-   files: followed by a list of file names
+-   directory (dir): followed by a single directory name
+-   directories (dirs): followed by a list of directory names
+
+
+<a id="orgcd0678b"></a>
 
 # Examples
 
 ![img](./figs/p1.png "Operate files")
 
 ![img](./figs/p2.png "Query commands")
-
-Enjoy exploring the possibilities of this script!
 
