@@ -1,15 +1,19 @@
 #!/bin/bash
 
 ###################################################################################################################
-# A fuzzy completion for an AI query.										  #
+# A clear completion for an AI query.										  #
 # 														  #
-# Its mechanism is to loop over all words in your query and check if it is a directory or file.			  #
-# For a file, a keyword "file" will be attached and its content will be appended at the your query.		  #
-# For a directory, a keyword "directory" will be attached and its content will be listed at the end of your query #
+# Its mechanism is to loop over all words in your query and react based on the keywords you provide.
+#
+# List of keywords (case insensitive):
+# file: followed by a single file
+# files: followed by a list of files. The end of files will be determined through checking existance of each word
+# directory (or dir): followed a single directory
+# directories (or dirs): follow by a list of directories
 ###################################################################################################################
 
 
-function be_fuzzy(){
+function be_strict(){
 
     # make temporay files
     fcontext=$(mktemp)
