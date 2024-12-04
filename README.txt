@@ -59,7 +59,8 @@ _________________
      within this section.
   4. Save the changes made to the file.
 
-  Next, you need to link src/aiser.sh to your bin PATH. Here's how:
+  Next, you need to link src/aiser.sh, src/aiser_fuzzy.sh,
+  src/aiser_clear.sh to your bin PATH. Here's how:
   1. Open your terminal or command prompt.
   2. Type the following command replacing '/path/to/your/directory/'
      with the actual path to where you saved src/aiser.sh: ```bash ln -s
@@ -102,3 +103,5 @@ _________________
   <./figs/p1.png>
 
   <./figs/p2.png>
+
+  <./figs/p3.png>

@@ -1,15 +1,15 @@
 
 # Table of Contents
 
-1.  [About AISer](#org6989819)
-2.  [Requirement](#orgb29af03)
-3.  [Usage](#orgc67858c)
-4.  [fuzzy match and clear match](#org30605b5)
-5.  [Examples](#orgcd0678b)
+1.  [About AISer](#orgbdbcde8)
+2.  [Requirement](#orga4b2c6f)
+3.  [Usage](#org25644ea)
+4.  [fuzzy match and clear match](#org5ab0131)
+5.  [Examples](#orgdc68e15)
 
 
 
-<a id="org6989819"></a>
+<a id="orgbdbcde8"></a>
 
 # About AISer
 
@@ -20,7 +20,7 @@ When executed with one or more filenames as arguments, the script reads their co
 information to the AI for analysis, displaying the generated output on the screen for your review.
 
 
-<a id="orgb29af03"></a>
+<a id="orga4b2c6f"></a>
 
 # Requirement
 
@@ -28,7 +28,7 @@ information to the AI for analysis, displaying the generated output on the scree
     Follow instructions in [Ollama](https://github.com/ollama/ollama) to install and pull Zephyr model "ollama pull zephyr"
 
 
-<a id="orgc67858c"></a>
+<a id="org25644ea"></a>
 
 # Usage
 
@@ -39,7 +39,7 @@ To customize your model in src/aiser.sh below the "add options" section, follow 
 3.  Make necessary modifications to the options and arguments provided within this section.
 4.  Save the changes made to the file.
 
-Next, you need to link src/aiser.sh to your bin PATH. Here's how:
+Next, you need to link src/aiser.sh, src/aiser<sub>fuzzy.sh</sub>, src/aiser<sub>clear.sh</sub> to your bin PATH. Here's how:
 
 1.  Open your terminal or command prompt.
 2.  Type the following command replacing '*path/to/your/directory*' with the actual path to where you saved src/aiser.sh:
@@ -61,7 +61,7 @@ Finally, make an alias to aiser.sh. Here's how:
 Enjoy exploring the possibilities of this script!
 
 
-<a id="org30605b5"></a>
+<a id="org5ab0131"></a>
 
 # fuzzy match and clear match
 
@@ -75,11 +75,13 @@ Clear match utilizes specific keywords to distinguish between file and directory
 -   directories (dirs): followed by a list of directory names
 
 
-<a id="orgcd0678b"></a>
+<a id="orgdc68e15"></a>
 
 # Examples
 
 ![img](./figs/p1.png "Operate files")
 
 ![img](./figs/p2.png "Query commands")
+
+![img](./figs/p3.png "Query directories")
 

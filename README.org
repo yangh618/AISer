@@ -68,3 +68,7 @@ Clear match utilizes specific keywords to distinguish between file and directory
 #+NAME:   fig:2
 [[./figs/p2.png]]
 
+#+CAPTION: Query directories
+#+NAME:   fig:3
+[[./figs/p3.png]]
+
